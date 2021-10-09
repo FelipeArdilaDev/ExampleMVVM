@@ -13,35 +13,31 @@ class QuoteViewModel : ViewModel() {
     val quoteModel = MutableLiveData<QuoteModel>()
     val isLoading = MutableLiveData<Boolean>()
 
-    var getOutesUseCase = GetQuotesUseCase()
-    var getRandomOutseUseCase = GetRandomQuoteUseCase()
+    var getQuotesUseCase = GetQuotesUseCase()
 
-    fun oncreate() {
+    fun onCreate() {
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getOutesUseCase()
-
-            if (result.isNullOrEmpty()) {
+            val result = getQuotesUseCase()
+            if (!result.isNullOrEmpty()) {
                 quoteModel.postValue(result[0])
                 isLoading.postValue(false)
-
             }
-
         }
     }
+
+    val getRandomQuotesUseCase = GetRandomQuoteUseCase()
 
     fun randomQuote() {
         isLoading.postValue(true)
         //val currentQuote = QuoteProvider.random()
         //quoteModel.postValue(currentQuote)
 
-        val quote = getRandomOutseUseCase()
+        val quote = getRandomQuotesUseCase()
         if (quote != null) {
             quoteModel.postValue(quote!!)
         }
 
         isLoading.postValue(false)
     }
-
-
 }

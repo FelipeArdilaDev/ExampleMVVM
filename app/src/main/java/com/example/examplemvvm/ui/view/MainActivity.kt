@@ -1,8 +1,8 @@
 package com.example.examplemvvm.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.examplemvvm.databinding.ActivityMainBinding
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        quoteViewModel.oncreate()
+        quoteViewModel.onCreate()
 
         quoteViewModel.quoteModel.observe(this, Observer { currentQuote ->
             mBinding.tvQuote.text = currentQuote.quote
