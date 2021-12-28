@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.examplemvvm">
+    package="com.example.examplemvvm_aristidevs">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
+        android:name=".MvvmExampleApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ExampleMVVM">
+        android:theme="@style/Theme.ExampleMVVM_AristiDevs">
         <activity
-            android:name="com.example.examplemvvm.ui.view.MainActivity"
+            android:name="com.example.examplemvvm_aristidevs.ui.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

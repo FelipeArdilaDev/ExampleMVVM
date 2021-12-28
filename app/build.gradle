@@ -1,14 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.examplemvvm"
-        minSdk 21
+        applicationId "com.example.examplemvvm_aristidevs"
+        minSdk 24
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -29,10 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
-        viewBinding = true
-    }
 
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -58,6 +60,11 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
     //Corrutinas
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+
+    // dagger hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 }

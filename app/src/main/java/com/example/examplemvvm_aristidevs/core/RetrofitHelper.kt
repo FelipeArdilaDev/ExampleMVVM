@@ -1,4 +1,4 @@
-package com.example.examplemvvm.core
+package com.example.examplemvvm_aristidevs.core
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

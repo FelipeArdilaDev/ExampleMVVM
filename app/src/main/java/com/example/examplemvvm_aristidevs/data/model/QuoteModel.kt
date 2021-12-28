@@ -1,3 +1,5 @@
+package com.example.examplemvvm_aristidevs.data.model
+
 import com.google.gson.annotations.SerializedName
 
 data class QuoteModel(

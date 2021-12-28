@@ -1,6 +1,6 @@
-package com.example.examplemvvm.data.data.network
+package com.example.examplemvvm_aristidevs.data.network
 
-import QuoteModel
+import com.example.examplemvvm_aristidevs.data.model.QuoteModel
 import retrofit2.Response
 import retrofit2.http.GET
 
